@@ -30,10 +30,12 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/containers', containers.index);
-app.get('/containers/:id', containers.show);
-app.post('/containers', containers.create);
-app.put('/containers', containers.update);
-app.del('/containers', containers.delete);
+app.get('/show', containers.show);
+
+/* http://localhost:3000/create?lng=_____&lat=_____&level=_____  (level is OPTIONAL)   */
+app.get('/create', containers.create);       
+app.get('/update', containers.update);
+app.get('/delete', containers.delete);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port %s in %s mode.",  app.get('port'), app.settings.env);
