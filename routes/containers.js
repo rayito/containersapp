@@ -29,36 +29,25 @@ exports.show = function(req, res) {
 
 exports.create = function(req, res) {
 
-  var container_name = req.body.container_name; // Name of container. 
-  var description = req.body.container_description;  // Description of the container
+  var lng = req.body.lng;         // Longitude of the container location. 
+  var lat = req.body.lat;         // Latitude of the container location.
+  var flevel = req.body.flevel;   // Filling level in %
+    
+  var newContainer = new Container(); 
 
-  //Container.findOne({ name: container_name }, function(err, doc) {  // This line is case sensitive.
-  Container.findOne({ name: { $regex: new RegExp(container_name, "i") } }, function(err, doc) {  // Using RegEx - search is case insensitive
-    if(!err && !doc) {
-      
-      var newContainer = new Container(); 
+    newContainer.location.lng = lng; 
+    newContainer.location.lat = lat;
+    newContainer.location.flevel = flevel;
+    
+    newContainer.save(function(err) {
 
-      newContainer.name = container_name; 
-      newContainer.description = description; 
-      
-      newContainer.save(function(err) {
+      if(!err) {
+        res.json(201, {message: "Container created with id " + newContainer._id + " and location " newContainer.location });    
+      } else {
+        res.json(500, {message: "Could not create container. Error: " + err});
+      }
 
-        if(!err) {
-          res.json(201, {message: "Container created with name: " + newContainer.name });    
-        } else {
-          res.json(500, {message: "Could not create container. Error: " + err});
-        }
-
-      });
-
-    } else if(!err) {
-      
-      // User is trying to create a container with a name that already exists. 
-      res.json(403, {message: "Container with that name already exists, please update instead of create or create a new container with a different name."}); 
-
-    } else {
-      res.json(500, { message: err});
-    } 
+    });
   });
 
 }
