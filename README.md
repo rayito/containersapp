@@ -1,5 +1,7 @@
 containersapp
 
+![Codefish status](https://codeship.io/projects/09e1f920-d123-0131-db62-1211774025ad/status)
+
 ## Instructions to run in local
  
  Install mongodb, node and express.
