@@ -64,9 +64,9 @@
   }
 
   function refresh () {
-    // $.get("http://localhost:3000/containers", function (data, textStatus, jqXHR) { 
-    //     document.getElementById('res').innerHTML = data;
-    //   });
+    $.get("http://localhost:3000/containers", function (data, textStatus, jqXHR) { 
+        document.getElementById('res').innerHTML = data;
+      });
 
     // var aClient = new HttpClient();
     // aClient.get('http://localhost:3000/containers', function(data) {
@@ -74,15 +74,15 @@
     //     // do something with answer
     // });
 
-    $(document).ready(function(){
-      $.ajax({
-        url: "http://localhost:3000/containers",
-        dataType: 'jsonp',
-        success: function(data){
-          $('#res').html(data);
-        }
-      });
-    });
+    // $(document).ready(function(){
+    //   $.ajax({
+    //     url: "http://localhost:3000/containers",
+    //     dataType: 'jsonp',
+    //     success: function(data){
+    //       $('#res').html(data);
+    //     }
+    //   });
+    // });
   };
 
   var HttpClient = function() {

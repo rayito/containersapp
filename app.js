@@ -8,9 +8,31 @@ var express = require('express')
   , containers = require('./routes/containers')
   , mongoose = require('mongoose');
 
+
 // MongoDB Connection 
 mongoose.connect('mongodb://localhost/containers_db');
 var app = express();
+app.use(express.bodyParser()); 
+
+// Enables CORS
+var enableCORS = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+ 
+    // intercept OPTIONS method
+    if ('OPTIONS' == req.method) {
+      res.send(200);
+    }
+    else {
+      next();
+    }
+};
+ 
+ 
+// enable CORS!
+app.use(enableCORS);
+//--------------
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -38,5 +60,6 @@ app.get('/update', containers.update);
 app.get('/delete', containers.delete);
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port %s in %s mode.",  app.get('port'), app.settings.env);
+  console.log("Express server listening on port " + app.get('port') + 
+              " in " + app.settings.env + " mode with CORS " + (enableCORS ? "enabled" : "disabled"));
 });
