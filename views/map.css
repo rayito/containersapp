@@ -1,0 +1,110 @@
+body{
+  font-family: 'Droid Sans', 'Helvetica', Arial, sans-serif;
+  background-color: #dbdbdb;
+}
+
+.grey {
+  color: grey;
+  font-family: 'Droid Sans', 'Helvetica', Arial, sans-serif;
+}
+
+.casered {
+  color: #c8375f;
+  font-family: 'Droid Sans', 'Helvetica', Arial, sans-serif;
+}
+
+.casepink {
+  color: #e85c81;
+  font-family: 'Droid Sans', 'Helvetica', Arial, sans-serif;
+}
+
+.casegreen {
+  color: #84d031;
+  font-family: 'Droid Sans', 'Helvetica', Arial, sans-serif;
+}
+
+.casegrey {
+  color: #dbdbdb;
+}
+
+.blue {
+  color: blue;
+  font-family: 'Droid Sans', 'Helvetica', Arial, sans-serif;
+}
+
+h1.title {
+  /*position: absolute; */
+  margin-left: 10%;
+}
+
+h2 {
+  margin-left: 10%;
+}
+
+#base {
+  position: absolute;
+  margin-left: 8%;
+  margin-right: 8%;
+  background-color: #454545;
+}
+
+#latlng{
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute; /* posición absoluta a navegador */
+  top: 0;             /* ajusta a borde de navegador */
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+
+#map{
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute; /* posición absoluta a navegador */
+  top: 11%; /* 50px debajo de borde de navegador */
+  left: 10%; /* ajusta a borde de navegador */
+  right: 10%;
+  bottom: 10%;
+  background: rgba(0,255,0,0.5); /* verde si no hay mapa */
+}
+
+#w {
+  width: 200px;
+}
+
+#filling {
+  float: left;
+}
+
+#pic {
+  float: left;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+/*#content{
+  width: 30%;
+  overflow: scroll;
+}*/
+
+#form{
+  display: block;
+  margin-left: 10%;
+  padding: 2%;
+  /*position: absolute; /* posición absoluta a navegador */
+  /*top: 12%;      /* 50px debajo de borde de navegador */
+  /*left: 10%;        /* ajusta a borde de navegador */
+  margin-right: 10%;
+  bottom: 10%;
+  background: rgba(0,255,0,0.5); /* verde si no hay mapa */
+}
+
+.result {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  padding: 2%;
+  background-color: white;
+}
