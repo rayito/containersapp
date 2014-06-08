@@ -1,5 +1,5 @@
 {
-  "name": "workout-tracker",
+  "name": "containersapp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,6 +10,6 @@
     "jade": "*",
     "mongoose": "~2.7.x"
   },
-  "author": "Donn Felker <donn@donnfelker.com> (http://blog.donnfelker.com)",
-  "description": "An demo application that tracks daily workouts as an example of how to create an API."
+  "author": "Edén Hernández <edenhernandez.de@gmail.com",
+  "description": "Waste Management web service & web app."
 }
