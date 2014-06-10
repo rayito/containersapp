@@ -51,7 +51,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-// app.get('/', routes.index);
+app.get('/', routes.index);
 app.get('/containers', containers.index);
 app.get('/show', containers.show);
 
