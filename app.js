@@ -44,7 +44,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  server.use('/public', express.static(__dirname + '/public'));
+  app.use('/public', express.static(__dirname + '/public'));
   app.use(express.static(__dirname + '/public'));
 });
 
