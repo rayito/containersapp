@@ -42,7 +42,6 @@ function generate (coll) {
 
       var icon = getIcon(level);
       var content = getContent(id, lat, lng, level, icon);
-      console.log(content);
 
       var marker = createNewMarker(lat, lng, icon);
 
@@ -68,6 +67,7 @@ function createNewMap (lat, lng) {
 };
 
 
+/* Creates a new GMaps marker in locat [lat, lng] with the proper icon.   */
 function createNewMarker (lat, lng, icon) {
 
   var m = map.addMarker({
@@ -80,6 +80,8 @@ function createNewMarker (lat, lng, icon) {
 };
 
 
+/* Creates a new event listener for the provided GMaps marker.        */
+/* OnClick it will show an InfoWindow with the provided html content. */
 function createNewListener (marker, content) {
   var m = marker;
   var c = content;
@@ -109,11 +111,11 @@ function getIcon (level)  {
 
 /* Returns the html content for the GMaps InfoWindow   */
 function getContent(id, lat, lng, level, icon) {
-  var c = '<div id="w"><h4 class="wparaf"><span class="casered">containers</span><span class="casegreen">app</span></h4>' +
+  var c = '<div class="w"><h4 class="wparaf"><span class="casered">containers</span><span class="casegreen">app</span></h4>' +
           '<p class="wparaf"><span class="b">Container: </span>' + id + '</p>' +
           '<p class="wparaf"><span class="b">Location: </span>' + lat + '°, ' + lng + '°</p>' +
-          '<div id="filling"><span class="b">Filling level: </span>' + level + '%</div>' + 
-          '<div id="pic"><span><img class=bottom src="' + icon + '"></span></div></div>';
+          '<div class="filling"><span class="b">Filling level: </span>' + level + '%</div>' + 
+          '<div class="pic"><span><img class=bottom src="' + icon + '"></span></div></div>';
 
   return c;
 }

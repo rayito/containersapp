@@ -5,10 +5,10 @@
   <title>Containers App</title>
   <script type="text/javascript" src="zepto.min.js"></script>
   <link rel="stylesheet" type="text/css" href="map.css" />
-<!--   <link rel="stylesheet" type="text/css" href="gh-buttons.css">
- -->  <link rel="stylesheet" type="text/css" href="./package-tuktuk-master/tuktuk.css">
-  <link rel="stylesheet" type="text/css" href="./package-tuktuk-master/tuktuk.theme.default.css">
-  <link rel="stylesheet" type="text/css" href="./package-tuktuk-master/tuktuk.icons.css">
+<!--   <link rel="stylesheet" type="text/css" href="gh-buttons.css">-->
+  <link rel="stylesheet" type="text/css" href="./package-tuktuk-master/tuktuk.css">
+  <link rel="stylesheet" type="text/css" href="./package-tuktuk-master/tuktuk.theme.default.css"> 
+  <link rel="stylesheet" type="text/css" href="./package-tuktuk-master/tuktuk.icons.css"> 
 </head>
 <body>
   <header class="bck margin-top margin-bottom">
@@ -39,20 +39,20 @@
         <input type="text" id="level">
       </fieldset>
 
-    <div class="row margin-top">
-      <div class="column_6 offset_3">
-        <button class="button secondary icon search" onclick="showContainer()">&nbsp;show</button>
-        <button class="button secondary icon file" onclick="createContainer()">&nbsp;create</button>
-        <button class="button secondary icon edit" onclick="updateContainer()">&nbsp;update</button>
-        <button class="button secondary icon repeat" onclick="initialize()">&nbsp;initialize</button>
+      <div class="row margin-top">
+        <div class="column_6 offset_3">
+          <button type="button" class="button secondary icon search" onclick="showContainer()">&nbsp;show</button>
+          <button type="button" class="button secondary icon file" onclick="createContainer()">&nbsp;create</button>
+          <button type="button" class="button secondary icon edit" onclick="updateContainer()">&nbsp;update</button>
+          <button type="button" class="button secondary icon repeat" onclick="initialize()">&nbsp;initialize</button>
+        </div>
       </div>
-    </div>
-    <div class="row margin-top">
-      <div class="column_3 offset_3">
-        <button class="button alert icon remove" onclick="deleteContainer()">&nbsp;delete</button>
-        <button class="button alert icon remove-sign" onclick="deleteALL()">&nbsp;delete all</button>
+      <div class="row margin-top">
+        <div class="column_3 offset_3">
+          <button type="button" class="button alert icon remove" onclick="deleteContainer()">&nbsp;delete</button>
+          <button type="button" class="button alert icon remove-sign" onclick="deleteALL()">&nbsp;delete all</button>
+        </div>
       </div>
-    </div>
   </section>
 
   <section class="bck dark padding text left">
@@ -64,8 +64,8 @@
 <div id="db" class="result margin-top"></div>
 
 </body>
-<script src="./package-tuktuk-master/tuktuk.js"></script>
-<script type="text/javascript" src="app.js"></script>
+<!-- <script src="./package-tuktuk-master/tuktuk.js"></script>
+ --><script type="text/javascript" src="app.js"></script>
 </html>
 
 
