@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Containers App</title>
+  <script type="text/javascript" src="zepto.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="map.css" />
+<!--   <link rel="stylesheet" type="text/css" href="gh-buttons.css">-->
+  <link rel="stylesheet" type="text/css" href="./package-tuktuk-master/tuktuk.css">
+  <link rel="stylesheet" type="text/css" href="./package-tuktuk-master/tuktuk.theme.default.css"> 
+  <link rel="stylesheet" type="text/css" href="./package-tuktuk-master/tuktuk.icons.css"> 
+</head>
+<body>
+  <header class="bck margin-top margin-bottom">
+    <div class="row">
+      <div class="column_2 offset_1">
+        <h1 class="form"><span class="casered">containers</span><span class="casegreen">app</span></h1>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <form id="form" name="form" class="margin-top">
+      <fieldset>
+        <label>Container ID:</label> 
+        <input type="text" id="id">
+      </fieldset>
+
+      <fieldset>
+        <label>Latitude:</label>
+        <input type="text" id="lat">
+
+        <label>Longitude:</label>
+        <input type="text" id="lng">
+      </fieldset>
+
+      <fieldset>
+        <label>Filling level:</label> 
+        <input type="text" id="level">
+      </fieldset>
+
+      <div class="row margin-top">
+        <div class="column_6 offset_3">
+          <button type="button" class="button secondary icon search" onclick="showContainer()">&nbsp;show</button>
+          <button type="button" class="button secondary icon file" onclick="createContainer()">&nbsp;create</button>
+          <button type="button" class="button secondary icon edit" onclick="updateContainer()">&nbsp;update</button>
+          <button type="button" class="button secondary icon repeat" onclick="initialize()">&nbsp;initialize</button>
+        </div>
+      </div>
+      <div class="row margin-top">
+        <div class="column_3 offset_3">
+          <button type="button" class="button alert icon remove" onclick="deleteContainer()">&nbsp;delete</button>
+          <button type="button" class="button alert icon remove-sign" onclick="deleteALL()">&nbsp;delete all</button>
+        </div>
+      </div>
+  </section>
+
+  <section class="bck dark padding text left">
+    <div class="result">Result:</div>
+    <div id="res" class="result"></div>
+  </section>
+       
+
+<div id="db" class="result margin-top"></div>
+
+</body>
+<!-- <script src="./package-tuktuk-master/tuktuk.js"></script>
+ --><script type="text/javascript" src="app.js"></script>
+</html>
+
+
