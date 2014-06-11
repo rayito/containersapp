@@ -2,7 +2,7 @@
 /* Containers management controller for the app.html view           */
 /********************************************************************/
 
-var host = "http://localhost:3000/";
+var host = "mongodb://heroku_app26231690:ms47909i4bu18a801t0me72ej7@ds027908.mongolab.com:27908/heroku_app26231690/";
 
 /* Deletes all the containers in the DB   */
 /* and creates four new containers.       */

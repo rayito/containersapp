@@ -10,7 +10,7 @@ var express = require('express')
 
 
 // MongoDB Connection 
-mongoose.connect('mongodb://localhost/containers_db');
+//mongoose.connect('mongodb://localhost/containers_db');
 var app = express();
 app.use(express.bodyParser()); 
 
@@ -46,6 +46,7 @@ app.configure(function(){
   app.use(app.router);
   app.use('/public', express.static(__dirname + '/public'));
   app.use(express.static(__dirname + '/public'));
+  app.db = mongoose.connect(process.env.MONGOLAB_URI);
 });
 
 app.configure('development', function(){

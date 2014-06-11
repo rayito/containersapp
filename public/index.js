@@ -1,5 +1,5 @@
 /* Current host */
-var host = "http://localhost:3000/";
+var host = "mongodb://heroku_app26231690:ms47909i4bu18a801t0me72ej7@ds027908.mongolab.com:27908/heroku_app26231690/";
 var containers = [];
 var markers = [];
 var map;
